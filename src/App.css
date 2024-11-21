@@ -1,0 +1,63 @@
+/* src/styles/App.css */
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --danger-color: #dc3545;
+  --background-color: #f4f6f8;
+  --sidebar-bg: #343a40;
+  --sidebar-hover-bg: #495057;
+  --text-color: #333;
+  --light-gray: #e9ecef;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-header {
+    display: none;
+  }
+
+  .sidebar-nav ul {
+    display: flex;
+  }
+
+  .sidebar-nav li {
+    margin: 0;
+  }
+
+  .sidebar-nav a {
+    padding: 10px 15px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}
